@@ -7,10 +7,10 @@ This is an experimental project to build a Blog engine from scratch
 Requirements
 -------------
 
-PHP 7.0+
-MySQL
-Apache or Nginx
-Composer
+* PHP 7.0+
+* MySQL
+* Apache or Nginx
+* Composer
 
 
 Installation
