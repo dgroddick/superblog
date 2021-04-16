@@ -17,7 +17,7 @@ if (isset($_POST['login'])) {
     $password = $_POST['password'];
     $hash = md5($password);
 
-    $blog = new SuperBlog\SuperBlog();
+    $blog = new SuperBlog\User();
     $user = $blog->get_user_by_username($username);
     //echo "<pre>"; print_r($user); echo "</pre>"; die();
     if(hash_equals($hash, $user['password'])) {

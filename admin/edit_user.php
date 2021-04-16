@@ -5,7 +5,7 @@
  */
 include dirname(__FILE__) . '/header.php';
 
-$blog = new SuperBlog\SuperBlog();
+$blog = new SuperBlog\User();
 
 $user_id = $_GET['user_id'];
 $user = $blog->get_user_by_id($user_id);

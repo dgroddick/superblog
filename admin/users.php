@@ -5,7 +5,7 @@
  */
 include dirname(__FILE__) . '/header.php';
 
-$blog = new SuperBlog\SuperBlog();
+$blog = new SuperBlog\User();
 ?>
 <div class="admin_content">
 

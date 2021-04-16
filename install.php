@@ -6,7 +6,9 @@ exit();
 require_once './vendor/autoload.php';
 require_once './config.php';
 
-$blog = new SuperBlog\SuperBlog();
+$blog = new SuperBlog();
+$u = new SuperBlog\User();
+$p = new SuperBlog\Post();
 
 if (isset($_GET['reset'])) {
     $blog->db_reset();
@@ -22,7 +24,7 @@ $args = array(
     'email' => 'same@example.com',
     'password' => $password
 );
-$blog->create_user($args);
+$u->create_user($args);
 
 
 
@@ -32,4 +34,4 @@ $args = array(
     'post_title' => 'This is a first second post',
     'post_content' => 'A bigger and better blog post'
 );
-$blog->create_post($args);
+$p->create_post($args);

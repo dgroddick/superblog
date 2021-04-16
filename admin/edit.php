@@ -5,7 +5,7 @@
  */
 include dirname(__FILE__) . '/header.php';
 
-$blog = new SuperBlog\SuperBlog();
+$blog = new SuperBlog\Post();
 
 $post_id = $_GET['post_id'];
 $posts = $blog->get_single_post($post_id);
