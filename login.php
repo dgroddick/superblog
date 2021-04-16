@@ -5,7 +5,6 @@
 session_start();
 require_once './vendor/autoload.php';
 require_once './config.php';
-
 ?>
 <form method="post" action="">
     <p>username: <input type="text" name="username" /></p>
@@ -19,7 +18,7 @@ if (isset($_POST['login'])) {
     $hash = md5($password);
 
     $blog = new SuperBlog\SuperBlog();
-    $user = $blog->get_user($username, $password);
+    $user = $blog->get_user_by_username($username);
     //echo "<pre>"; print_r($user); echo "</pre>"; die();
     if(hash_equals($hash, $user['password'])) {
         $_SESSION['loggedin'] = true;

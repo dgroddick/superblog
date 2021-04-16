@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 /**
- * Functions for interacting with the database
+ * Functions for doing database stuff
  */
 namespace SuperBlog;
 
@@ -60,7 +60,19 @@ class SuperBlog
         }
     }
 
-    public function get_user($username, $password): array
+    public function update_user(array $args)
+    {
+        $sql = "UPDATE users SET username='$args[username]', email='$args[email]', password='$args[password]' WHERE id='$args[id]'";
+
+        if ($this->conn->query($sql)) {
+            echo "<p>User created successfully</p>";
+        }
+        else {
+            echo "Error: " . $sql . "<br>" . $this->conn->error;
+        }
+    }
+
+    public function get_user_by_username($username): array
     {
         $sql = "SELECT * FROM users WHERE username='$username'";
         $result = $this->conn->query($sql);
@@ -77,6 +89,42 @@ class SuperBlog
         $this->conn->close();
     }
 
+    public function get_user_by_id(int $user_id)
+    {
+        $sql = "SELECT * FROM users WHERE id='$user_id'";
+        $result = $this->conn->query($sql);
+        //echo "<pre>"; print_r($result); echo "</pre>";
+
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                return $row;
+            }
+        }
+        else {
+            echo "Error: " . $sql . "<br>" . $this->conn->error;
+        }
+
+        $this->conn->close();
+    }
+
+    public function get_users(): array
+    {
+        $data = [];
+        $sql = "SELECT * FROM users";
+        $result = $this->conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                array_push($data, $row);
+            }
+        }
+        else {
+            echo "<p style='color:red'>Error: No users</p>";
+        }
+
+        $this->conn->close();
+        return $data;
+    }
 
     public function create_options_table() 
     {
