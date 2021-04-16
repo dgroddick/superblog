@@ -2,9 +2,20 @@
 
 This is the most secure Blog CMS on the planet.
 
+SuperBlog has been designed from the ground up using PHP. You'll find no bloated frameworks or libraries here, because everyone knows the most secure way to build a web application is to write all the code yourself. Using other people's code just creates problems...
+
+CAUTION: This is NOT the most secure blog cms on the planet. SuperBlog is an intentionally vulnerable Web Application used for security testing. Created in the spirit of DVWA and WebGoat, SuperBlog is meant to be hacked!
+Please don't expose SuperBlog to any Internet connected hosts or sensitive data.
+
+## Features of SuperBlog
+
+- Database SQL queries are handwritten for MAXIMUM speed and flexibility. No heavy ORMs here!
+- Easy user management with ULTRA SECURE md5 hashing to protect your passwords...
+- Hand-written templating system to allow you to easily modify the front-end UI of your blog.
+
 ## Requirements
 
-- PHP 7.0+
+- PHP
 - MySQL
 - Apache or Nginx
 - Composer
