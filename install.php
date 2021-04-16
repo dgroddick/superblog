@@ -18,18 +18,18 @@ if (isset($_GET['reset'])) {
 $password = md5('password1234');
 
 $args = array(
-    'username' => 'admin',
-    'email' => 'dgroddick@gmail.com',
+    'username' => 'sam',
+    'email' => 'same@example.com',
     'password' => $password
 );
-//$blog->create_user($args);
+$blog->create_user($args);
 
 
 
-$blog->create_post_table();
+//$blog->create_post_table();
 $args = array(
-    'user_id' => 1,
-    'post_title' => 'This is a first fancy post',
+    'user_id' => 2, 
+    'post_title' => 'This is a first second post',
     'post_content' => 'A bigger and better blog post'
 );
 $blog->create_post($args);

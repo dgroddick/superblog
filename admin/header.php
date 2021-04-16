@@ -2,6 +2,12 @@
 /**
  * Admin page header
  */
+session_start();
+if (!$_SESSION['loggedin']) {
+    header("Location: ../login.php");
+}
+require_once '../vendor/autoload.php';
+require_once dirname(__FILE__) . '/../config.php';
 ?>
 <!doctype html>
 <html>
