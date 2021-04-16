@@ -1,30 +1,23 @@
-SuperBlog
-==========
+# SuperBlog
 
-This is an experimental project to build a Blog engine from scratch
+This is the most secure Blog CMS on the planet.
 
+## Requirements
 
-Requirements
--------------
+- PHP 7.0+
+- MySQL
+- Apache or Nginx
+- Composer
 
-* PHP 7.0+
-* MySQL
-* Apache or Nginx
-* Composer
+## Installation
 
-
-Installation
--------------
-
-Put the code somewhere your Web Server can find it. I'm using the userdir module with Apache for now.
+Put the code somewhere your Web Server can find it.
 
 Run composer install
 
 For now you'll need to create the database manually. There's methods that will create the tables in the SuperBlog class.
 
-TODO
-------
+## TODO
 
 I'm still building an installer script for setting up the database tables
 Also, everything else :-/
-
