@@ -2,6 +2,40 @@
  * Admin CSS
  */
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#admin_container {
+  display: grid;
+  grid-template-columns: 2fr 5fr 3fr;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+  grid-gap: 0.75em;
+}
+
+#admin_header {
+  grid-area: header;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+#admin_content {
+  grid-area: main;
+  border: 1px solid lightgray;
+  width: 100%;
+}
+
+#admin_sidebar {
+  grid-area: sidebar;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+#admin_footer {
+  grid-area: footer;
+  background-color: #eee;
+  border: 1px solid #ccc;
 }

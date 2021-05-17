@@ -7,7 +7,7 @@ include dirname(__FILE__) . '/header.php';
 
 $blog = new SuperBlog\User();
 ?>
-<div class="admin_content">
+<div id="admin_content">
 
 <?php $users = $blog->get_users(); ?>
 <?php /*echo "<pre>"; print_r($users); echo "</pre>";*/ ?>
@@ -21,3 +21,5 @@ $blog = new SuperBlog\User();
 <?php endif; ?>
 
 </div><!-- #admin_content -->
+
+<?php include dirname(__FILE__) . '/footer.php'; ?>

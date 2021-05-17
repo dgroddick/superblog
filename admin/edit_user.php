@@ -11,6 +11,7 @@ $user_id = $_GET['user_id'];
 $user = $blog->get_user_by_id($user_id);
 //echo "<pre>"; print_r($post); echo "</pre>";
 ?>
+<div id="admin_content">
 <h3>Edit User</h3>
 <?php
 if ($user): ?>
@@ -23,3 +24,5 @@ if ($user): ?>
         <input type="submit" name="save" value="Save">
     </form>
 <?php endif; ?>
+</div>
+<?php include dirname(__FILE__) . '/footer.php'; ?>

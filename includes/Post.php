@@ -109,4 +109,12 @@ class Post extends SuperBlog
 
     }
 
+    public function delete_post($post_id)
+    {
+        $sql = "DELETE FROM posts WHERE id=$post_id";
+        //echo $sql; exit();
+        $result = $this->conn->query($sql);
+        $this->conn->close();
+    }
+
 }
