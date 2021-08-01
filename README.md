@@ -22,8 +22,11 @@ Please don't expose SuperBlog to any Internet connected hosts or sensitive data.
 
 ## Installation
 
-Put the code somewhere your Web Server can find it. If you have Docker installed you can run 'docker-compose up -d' to run
-the application in a Docker container.
+Put the code somewhere your Web Server can find it. If you have Docker installed you can run
+
+    docker-compose up -d
+
+to run the application in a Docker container.
 
 For now you'll need to create the database manually. There's methods that will create the tables in the SuperBlog class.
 
